@@ -7,7 +7,7 @@ import { Article } from './article/article.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  articles:Article[];   // <-- component property
+  articles:Article[];
   constructor(){
     this.articles = [
       new Article('Angular 2', 'http://angular.io', 3),
