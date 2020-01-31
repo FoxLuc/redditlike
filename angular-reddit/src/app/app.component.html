@@ -13,6 +13,9 @@
     Submit link
   </button>
 </form>
+<div class="container">
+  <app-article *ngFor="let art of sortedarticles()" [article]="art"> </app-article>
+</div>
 </div>
 
 
