@@ -17,7 +17,11 @@ export class AppComponent {
   }
 
   addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
-    this.articles.push(new Article('Angular 2', 'http://angular.io', 3))
+    this.articles.push(new Article(title.value, link.value, 3))
     return false;
+  }
+
+  sortedArticles(): Article[] {
+    return this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
   }
 }
